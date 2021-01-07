@@ -9,15 +9,6 @@ const NavLayout = () => {
                 <NavItem>
                     <NavLink href="/">Home</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink href="/order/pizza">Pizza</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/order/calzone">Calzone</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/ingredients">Ingredients</NavLink>
-                </NavItem>
             </Nav>
         </Navbar>
     );
