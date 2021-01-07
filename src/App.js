@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route } from "react-router";
+import Ingredients from "./Components/Ingredients";
+import Calzone from "./Components/Calzone";
+import Home from "./Components/Home";
+import Pizza from "./Components/Pizza";
+import NotFound from "./Components/NotFound";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div className="jumbotron">
+          <h1>Order your own pizza</h1>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/order/pizza" component={Pizza} />
+            <Route exact path="/order/calzone" component={Calzone} />
+            <Route exact path="/ingredients" component={Ingredients} />
+            <Route component={NotFound} status={404}/>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
