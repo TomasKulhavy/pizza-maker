@@ -1,6 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Navbar, Nav, NavItem, NavbarBrand } from "reactstrap";
+import { Navbar, Nav, NavItem, NavLink, NavbarBrand } from "reactstrap";
 
 const NavLayout = () => {
     return (

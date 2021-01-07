@@ -13,8 +13,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <div className="jumbotron">
-          <h1>Order your own pizza</h1>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/order/pizza" component={Pizza} />
@@ -22,7 +20,6 @@ function App() {
             <Route exact path="/ingredients" component={Ingredients} />
             <Route component={NotFound} status={404}/>
           </Switch>
-        </div>
       </Router>
     </div>
   );
