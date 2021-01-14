@@ -12,27 +12,27 @@ const Home = () => {
                 <Col>
                     <Card>
                         <CardBody>
-                            <CardTitle tag="h5">Order pizza</CardTitle>
-                            <CardText>Order your own pizza</CardText>
-                            <Link to="/order/pizza" className=" btn btn-success">Order</Link>
+                            <CardTitle tag="h5">Objednej si pizzu</CardTitle>
+                            <CardText>Objednej si vlastní pizzu</CardText>
+                            <Link to="/order/pizza" className=" btn btn-success">Objednat</Link>
                         </CardBody>
                     </Card>
                 </Col>
                 <Col>
                     <Card>
                         <CardBody>
-                            <CardTitle tag="h5">Order calzone</CardTitle>
-                            <CardText>Order your own calzone</CardText>
-                            <Link to="/order/calzone" className=" btn btn-success">Order</Link>
+                            <CardTitle tag="h5">Objednej si calzone</CardTitle>
+                            <CardText>Objednej si vlastní calzone</CardText>
+                            <Link to="/order/calzone" className=" btn btn-success">Objednat</Link>
                         </CardBody>
                     </Card>
                 </Col>
                 <Col>
                     <Card>
                         <CardBody>
-                            <CardTitle tag="h5">Ingredients</CardTitle>
-                            <CardText>Look at our ingredients</CardText>
-                            <Link to="/ingredients" className=" btn btn-success">Edit</Link>
+                            <CardTitle tag="h5">Ingredience</CardTitle>
+                            <CardText>Podívejte se na naše ingerience</CardText>
+                            <Link to="/ingredients" className=" btn btn-success">Upravit/Přidat</Link>
                         </CardBody>
                     </Card>
                 </Col>
