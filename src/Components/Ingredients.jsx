@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { IngredientsContext, REMOVE_INGREDIENT, ADD_INGREDIENT } from "../Providers/IngredientsContext";
+import { IngredientsContext, REMOVE_INGREDIENT, ADD_INGREDIENT, ADD_TO_ORDER_CALZONE, ADD_TO_ORDER_PIZZA } from "../Providers/IngredientsContext";
 import { Table, Jumbotron, Container, Button, Input } from "reactstrap";
 import NavLayout from "./NavLayout";
 
@@ -20,6 +20,8 @@ const Ingredients = () => {
                                 <th>Název</th>
                                 <th>Kategorie</th>
                                 <th></th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,14 +31,35 @@ const Ingredients = () => {
                                         <tr key={index}>
                                             <td>{item.name}</td>
                                             <td>{item.category}</td>
-                                            <Button 
-                                                className="btn-danger" 
-                                                onClick={() => 
+                                            <Button
+                                                className="btn-danger mr-1"
+                                                onClick={() =>
                                                     dispatch({
-                                                        type: REMOVE_INGREDIENT, 
+                                                        type: REMOVE_INGREDIENT,
                                                         index: index
-                                                })}>
-                                            X</Button>
+                                                    })}>
+                                                X
+                                            </Button>
+                                            <Button
+                                                className="btn-success mr-1"
+                                                onClick={() =>
+                                                    dispatch({
+                                                        type: ADD_TO_ORDER_PIZZA,
+                                                        name: item.name,
+                                                        category: item.category,
+                                                    })}>
+                                                PIZZA
+                                            </Button>
+                                            <Button
+                                                className="btn-success mr-1"
+                                                onClick={() =>
+                                                    dispatch({
+                                                        type: ADD_TO_ORDER_CALZONE,
+                                                        name: item.name,
+                                                        category: item.category,
+                                                    })}>
+                                                CALZONE
+                                            </Button>
                                         </tr>
                                     )
                                 )
@@ -48,13 +71,13 @@ const Ingredients = () => {
                         className="my-3"
                         placeholder="Název"
                         value={nameInput}
-                        onChange={e=>{setNameInput(e.target.value)}}
+                        onChange={e => { setNameInput(e.target.value) }}
                     ></Input>
                     <Input
                         className="my-3"
                         placeholder="Kategorie"
                         value={categoryInput}
-                        onChange={e=>{setCategoryInput(e.target.value)}}
+                        onChange={e => { setCategoryInput(e.target.value) }}
                     ></Input>
                     <Button className="btn-success my-3" onClick={() => {
                         dispatch({
