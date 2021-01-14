@@ -20,9 +20,9 @@ function App() {
         <Router history={history}>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/order/pizza" component={Pizza} />
-            <Route path="/order/calzone" component={Calzone} />
-            <Route path="/ingredients" component={Ingredients} />
+            <Route exact path="/order/pizza" component={Pizza} />
+            <Route exact path="/order/calzone" component={Calzone} />
+            <Route exact path="/ingredients" component={Ingredients} />
             <Route component={NotFound} status={404}/>
           </Switch>
         </Router>
